@@ -1,0 +1,44 @@
+body { 
+    background-color: white;
+    color: purple;
+    font-family:'Times New Roman', Times, serif;
+}
+section {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 20px;
+}
+   
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color:aqua;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: forestgreen;
+
+}
+
+#experience ul {
+    list-style: none;
+    padding: 0;
+
+}
+#experience li {
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#connect a {
+    color: darkorange;
+    text-decoration: none;
+    font-weight: bold;
+}
+#connect a:hover{
+text-decoration: underline;
+
+}
