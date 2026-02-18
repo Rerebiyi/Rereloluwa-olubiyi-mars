@@ -6,28 +6,58 @@
     <meta name="description" content="Personal portfolio website" />
     <meta name="author" content="Your Name" />
 
-    <!-- Lesson 8 -->
+    <!-- Link to CSS-->
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
     <h1>Rereloluwa Olubiyi</h1>
 
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+    
     <section id="about">
       <h2>About</h2>
+
+      <img 
+      src="images/profile.jpeg" 
+      alt="Photo of Jane Doe"
+      class="profile-pic"
+    >
+  
+
+
       <p>
-        Write a short paragraph about yourself here. I am learning web development and building my skills in HTML and CSS.
+        Hello, My name is Rereloluwa Olubiyi. I am building my technical skills by learning web development,HTML and CSS.
       </p>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>Coursework in web development</li>
-        <li>HTML and CSS fundamentals</li>
-        <li>Git and GitHub</li>
-      </ul>
+    <div class="experience-item">
+      <div class="experience-top">
+        <h3 class="job-title">Web Development Coursework</h3>
+        <p class="job-dates">2024 – Present</p>
+      </div>
+      <p class="job-description">
+        Learned HTML, CSS, Git, and GitHub while building structured web projects.
+      </p>
+    </div>
+    
+    <section>
+      <h2 id="skills">Skills</h2>
     </section>
+    
+    <section>
+      <h2 id="projects">Projects</h2>
+      <ul id="projects-list"></ul>
+    </section>
+    
 
     <section id="connect">
       <h2>Connect</h2>
