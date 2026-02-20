@@ -23,16 +23,6 @@ h1 {
 
 }
 
-#experience ul {
-    list-style: none;
-    padding: 0;
-
-}
-#experience li {
-    border: 1px solid green;
-    padding: 10px;
-    margin-bottom: 10px;
-}
 #connect a {
     color: darkorange;
     text-decoration: none;
@@ -42,3 +32,44 @@ h1 {
 text-decoration: underline;
 
 }
+
+/* Lesson 9 - Flexbox for Experience */
+
+  
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    max-width: 600px;
+  }
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .job-title,
+  .job-dates,
+  .job-description {
+    margin: 0;
+  }
+  
+  /* Lesson 9 - Flexbox for Connect */
+  #connect ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
