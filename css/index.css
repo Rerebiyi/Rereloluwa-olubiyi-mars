@@ -42,3 +42,13 @@ h1 {
 text-decoration: underline;
 
 }
+
+.profile-pic {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 3px solid #38bdf8;
+  }
