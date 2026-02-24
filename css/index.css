@@ -1,54 +1,143 @@
+/* Lesson 10 – Mobile First */
+
+/* Base styles (mobile) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body { 
-    background-color: white;
-    color: purple;
-    font-family:'Times New Roman', Times, serif;
+  background-color: white;
+  color: purple;
+  font-family: 'Times New Roman', Times, serif;
+
+  /* Keep the content centered and prevent it from getting too wide */
+  width: min(92%, 60rem);
+  margin: 0 auto;
+  padding: 1.25rem 0;
 }
+
+/* Sections */
 section {
-    border: 1px solid red;
-    padding: 20px;
-    margin: 20px;
-}
-   
-h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color:aqua;
+  border: 1px solid red;
+  padding: 1.25rem;
+  margin: 1.25rem;
 }
 
+/* Headings */
 h1 {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    color: forestgreen;
+  font-weight: bold;
+  text-align: center;
+  color: forestgreen;
 
+  /* Adjust font size based on screen size */
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  margin: 0 0 1rem;
 }
 
+h2 {
+  font-weight: bold;
+  color: aqua;
+
+  /* Adjust heading size for larger screens */
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  margin-bottom: 0.75rem;
+}
+
+/* Experience list (mobile) */
 #experience ul {
-    list-style: none;
-    padding: 0;
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 #experience li {
-    border: 1px solid green;
-    padding: 10px;
-    margin-bottom: 10px;
+  border: 1px solid green;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
 }
+
+/* Connect links */
+#connect ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
 #connect a {
-    color: darkorange;
-    text-decoration: none;
-    font-weight: bold;
-}
-#connect a:hover{
-text-decoration: underline;
-
+  color: darkorange;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+#connect a:hover,
+#connect a:focus {
+  text-decoration: underline;
+}
+
+/* Profile pic */
 .profile-pic {
-    display: block;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
-    border: 3px solid #38bdf8;
+  display: block;
+
+  /* Make the image responsive but not huge */
+  width: min(11rem, 60vw);
+  aspect-ratio: 1 / 1;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin: 1.25rem auto;
+  border: 3px solid #38bdf8;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    /* More spacing on bigger screens */
+    section {
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+  
+    /* Align name left on tablet */
+    h1 {
+      text-align: left;
+      margin-bottom: 1.25rem;
+    }
+  
+    /* Make items for experience roomier */
+    #experience li {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+/* Desktop styles */
+  @media (min-width: 1024px) {
+
+    /* Wider layout on desktop */
+    body {
+      width: min(88%, 72rem); 
+      padding: 2rem 0;        
+    }
+  
+     /* Slightly bigger section headings */
+    h2 {
+      font-size: 2rem;       
+      margin-bottom: 1rem;    
+    }
+  
+   /* Use grid for Experience list on desktop */
+
+    #experience ul {
+      display: grid; 
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;     
+    }
+  
+    /* Grid handles spacing, so remove bottom margin */
+
+    #experience li {
+      margin-bottom: 0;      
+    }
   }
