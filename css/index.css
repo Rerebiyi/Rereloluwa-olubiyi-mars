@@ -58,6 +58,22 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
+/* Skills list (mobile) */
+#skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+#skills li {
+  border: 1px solid purple;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
 /* Connect links */
 #connect ul {
   padding-left: 1.25rem;
@@ -115,6 +131,10 @@ h2 {
 /* Desktop styles */
   @media (min-width: 1024px) {
 
+  /* Skills layout on desktop */
+  #skills ul {
+    justify-content: center;
+  }
     /* Wider layout on desktop */
     body {
       width: min(88%, 72rem); 
