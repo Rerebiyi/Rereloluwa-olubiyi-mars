@@ -108,28 +108,40 @@ h2 {
 
 /* Tablet */
 @media (min-width: 768px) {
-    /* More spacing on bigger screens */
-    section {
-      padding: 1.75rem;
-      margin: 1.5rem 0;
-    }
-  
-    /* Align name left on tablet */
-    h1 {
-      text-align: left;
-      margin-bottom: 1.25rem;
-    }
-  
-    /* Make items for experience roomier */
-    #experience li {
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
+
+  #leave-message input,
+  #leave-message textarea {
+    font-size: 1.05rem;
+    padding: 0.85rem;
   }
+
+  #leave-message button {
+    width: fit-content;
+    padding: 0.85rem 1.25rem;
+  }
+
+  /* More spacing on bigger screens */
+  section {
+    padding: 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Align name left on tablet */
+  h1 {
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Make items for experience roomier */
+  #experience li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 
 
 /* Desktop styles */
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
 
   /* Skills layout on desktop */
   #skills ul {
@@ -160,4 +172,33 @@ h2 {
     #experience li {
       margin-bottom: 0;      
     }
+  }
+
+
+  #leave-message form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  #leave-message label {
+    font-weight: bold;
+  }
+  
+  #leave-message input,
+  #leave-message textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  #leave-message textarea {
+    min-height: 8rem;
+    resize: vertical;
+  }
+  
+  #leave-message button[type="submit"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
   }
