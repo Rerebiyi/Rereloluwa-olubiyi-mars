@@ -70,3 +70,24 @@ newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 event.target.reset();
 });
+
+fetch("https://api.github.com/users/Rerebiyi/repos")
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    const repositories = data;
+    console.log(repositories);
+
+    const projectSection = document.querySelector("#projects");
+    const projectList = projectSection.querySelector("#projects-list");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching repositories:", error);
+  });
