@@ -85,7 +85,10 @@ h2 {
 
 /* Connect links */
 #connect ul {
-  padding-left: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
@@ -208,6 +211,4 @@ h2 {
   
   #leave-message button[type="submit"] {
     padding: 0.75rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+    fo
