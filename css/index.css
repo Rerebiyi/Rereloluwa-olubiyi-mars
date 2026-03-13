@@ -46,16 +46,15 @@ h2 {
 }
 
 /* Experience list (mobile) */
-#experience ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#experience li {
+.experience-item {
   border: 1px solid green;
   padding: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 #projects-list {
@@ -120,7 +119,6 @@ h2 {
 
 /* Tablet */
 @media (min-width: 768px) {
-
   #leave-message input,
   #leave-message textarea {
     font-size: 1.05rem;
@@ -145,70 +143,71 @@ h2 {
   }
 
   /* Make items for experience roomier */
-  #experience li {
+  .experience-item {
     padding: 1rem;
-    margin-bottom: 1rem;
   }
 }
 
-
 /* Desktop styles */
 @media (min-width: 1024px) {
-
-  /* Skills layout on desktop */
   #skills ul {
     justify-content: center;
   }
-    /* Wider layout on desktop */
-    body {
-      width: min(88%, 72rem); 
-      padding: 2rem 0;        
-    }
-  
-     /* Slightly bigger section headings */
-    h2 {
-      font-size: 2rem;       
-      margin-bottom: 1rem;    
-    }
-  
-   /* Use grid for Experience list on desktop */
 
-    #experience ul {
-      display: grid; 
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;     
-    }
-  
-    /* Grid handles spacing, so remove bottom margin */
-
-    #experience li {
-      margin-bottom: 0;      
-    }
+  body {
+    width: min(88%, 72rem);
+    padding: 2rem 0;
   }
 
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
   #leave-message form {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
   }
-  
+
   #leave-message label {
     font-weight: bold;
   }
-  
+
   #leave-message input,
   #leave-message textarea {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
   }
-  
+
   #leave-message textarea {
     min-height: 8rem;
     resize: vertical;
   }
-  
+
   #leave-message button[type="submit"] {
     padding: 0.75rem 1rem;
-    fo
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #messages ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+
+  #messages li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid purple;
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+}
